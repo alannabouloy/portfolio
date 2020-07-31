@@ -3,9 +3,10 @@
 header {
   background-color: #2D0320;
   margin: 0;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 100px;
   color: #FFFFFF;
+  height: auto;
 }
 
 h1 {
