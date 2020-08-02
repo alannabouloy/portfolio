@@ -1,9 +1,3 @@
-/*1076px * 664px is the media breakpoint*/
-@media only screen and (max-width: 1076px) {
-  div #image {
-    margin: auto;
-    width: 300px;
-}
 /* header and menu */
 
 header {
