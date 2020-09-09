@@ -172,6 +172,10 @@ textarea{
   color: #D3D3D3;
 }
 
+.projects img {
+  width: 100%;
+}
+
 .center{
   text-align: center;
 }
