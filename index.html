@@ -8,49 +8,49 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
 	<link href="style.css" rel="stylesheet" type="text/css" />
   <link href = "https://alannabouloy.github.io/portfolio/fonts/stylesheet.css" rel = "stylesheet" type = "text/css"/>
-	<style>
-		@media only screen and (max-width: 1076px){
-			div #image {
-				margin: auto;
-				margin-top: 10px;
-				width:300px;
-		}
-	</style>
 </head>
 
 <body>
   <header>
-    <!--Include a nav section that links down to the different sections -->
+    <!-- Include a nav section that links down to the different sections -->
     <h1 id = "top">Alanna Bouloy</h1>
-    <h3>Software Developer</h3>
     <nav>
       <ul>
-        <li><a href = "#about">About Me</a></li>
-        <li><a href = "#dnd">DnD Character Generator</a></li>
-        <li><a href = "#contact">Contact Me</a></li>
+        <li><a href = "#about">About</a></li>
+        <li><a href = "#dnd">DnD Generator</a></li>
+        <li><a href = "#contact">Contact</a></li>
+        <li><a href = "#projects">Projects</a></li>
 	</ul>
     </nav>
   </header>
+
   <main>
     <div>
       <article>
-        <!--Picture of me-->
-        <div id = "image">
-        <img  id = "portrait" src = "images/me.jpg" width = "500" alt = "a picture of Alanna">
-        </div>
-        <section class = "intro">
-          <!--Introduction-->
-          <h2> Hey there! </h2>
-          <p>I'm a writer and software developer based out of Orlando, FL.</p>
-
-          <p>In my spare time I can be found:</p>
-          <div class = "list-1">
-            <ul>
-              <li>Planning my next DnD campaign</li>
-              <li>Exploring my local library</li>
-              <li>Geeking out at the Orlando Science Center</li>
-            </ul>
+        <!--First Group divided into 2 items: img and p-->
+        <div class="group">
+          <div class="item">
+            <!--Picture of me-->
+            <div id = "image">
+            <img  id = "portrait" src = "images/me.jpg" width = "500" alt = "a picture of Alanna">
+            </div>
           </div>
+          <div class="item">
+          <section class = "intro">
+            <!--Introduction-->
+            <h2> Hey there! </h2>
+            <p>I'm a writer and software developer based out of Durham, NC.</p>
+
+            <p>In my spare time I can be found:</p>
+            <div class = "list-1">
+              <ul>
+                <li>Planning my next DnD campaign</li>
+                <li>Exploring my local library</li>
+                <li>Hiking in the mountains near my house</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         </section>
 
 
@@ -59,11 +59,41 @@
           
           <section>
               <h2 id = "about">About Me</h2>
-              <p>I started coding in college while I was interning with a local marketing agency managing websites for clients and learning basic HTML and CSS. After that, my interest in web development grew.</p>
 
-              <p>Currently, I'm enrolled in <a href = "https://www.thinkful.com/bootcamp/web-development/full-time/" target = "_blank">Thinkful's Software Engineering Immersion program</a> and excited to grow my skills as a developer.</p>
+              <!--Second Group: Divided into 3 Sections + 1 section at bottom-->
+              <div class="group">
 
-              <p>If you're searching for a developer to collaborate with you on a new and interesting project, please see the section down below for how to <a href = "#contact">contact me.</a></p>
+                <!--item 1: languages-->
+                <div class="item">
+                  <h3>Languages</h3>
+                  <ul>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Spanish</li>
+                  </ul>
+                </div>
+
+                <!--item 2: Experience-->
+                <div class="item item-double">
+                  <h3>Experience</h3>
+                  <p>I started coding in college while I was interning with a local marketing agency managing websites for clients and learning basic HTML and CSS. Currently, I'm enrolled in <a href = "https://www.thinkful.com/bootcamp/web-development/full-time/" target = "_blank">Thinkful's Software Engineering Immersion program</a> and excited to grow my skills as a developer. </p>
+                </div>
+
+                <!--item 3: Services Offered-->
+                <div class="item">
+                  <h3>Services</h3>
+                  <ul>
+                    <li>Fullstack App Development</li>
+                    <li>Personal Website Design</li>
+                    <li>Professional Portfolios</li>
+                    <li>Mobile Games</li>
+                  </ul>
+                </div>
+               </div>
+              <div class="stand-alone">
+                  <p>If you're searching for a developer to collaborate with you on a new and interesting project, please see the section down below for how to <a href = "#contact">contact me.</a></p>
+                </div>
           </section>
         
 
@@ -98,7 +128,45 @@
         <div class = "contact">
           <section>
             <h2 id = "contact">Contact Me</h2>
-            <p>Here are some links where you can reach me to collaborate on projects:</p>
+            
+            <div class="contact-form">
+              <form action="https://formspree.io/xqkyrwpl" method="POST">
+                <div class="group">
+                <div class="item">
+                  <div class="align-left">
+                   <label  for="name">Name:</label>
+                  </div>
+                  <div class="align-left">
+                    <input id="name" type="text" name="name" placeholder="Beauregard Lionet">
+                  </div>
+                  <div class="align-left">
+                    <label for="email">Email:</label>
+                  </div>
+                  <div class="align-left">
+                    <input id="email" type="email" name="email" placeholder="thepunchingmonk@zadash.com">
+                  </div>
+                  <div>
+                    <p class="align-left">If you're interested in collaborating on a project, or if you have any questions regarding past projects of mine, feel free to fill out this form and shoot me an email! I always respond to messages within 24hrs of receiving them.</p>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="align-left">
+                    <label for="message">Message:</label>
+                  </div>
+                  <div class="align-left">
+                    <textarea id="message" name="message"></textarea>
+                  </div> 
+                  <div class="align-left">
+                    <button type="submit">Send Email</button>
+                  </div>
+                </div>
+              </div>
+              </form>
+            </div>
+            <div>
+              <p>Here are more links where you can reach me:</p>
+            </div>
           <div class ="list-3">
             <ul>
               <li><a href= "https://github.com/alannabouloy" target = "_blank">GitHub</a></li>
@@ -109,6 +177,74 @@
 
             <p>You can also follow me on <a href = "https://twitter.com/yerawizardlani" target = "_blank">Twitter</a> to keep up with the latest news on my projects and DnD Campaigns!</p>
           </section>
+         </div>
+         <!--Projects Section: should include 3 potential thumbnails, brief descriptions, and links to repositories-->
+         <div class="projects">
+           <section>
+             <h2 id="projects">Projects</h2>
+             <div>
+               <p>Here are some of my latest projects:</p>
+             </div>
+
+             <div class="group">
+               <div class="item">
+                 <div>
+                   <h3>Project #1</h3>               
+                 </div>
+                 
+                 <div>
+                  <img id="project-1" src="images/maine-1.jpg" width="100%" alt="thumbnail of project">
+                 </div>
+                
+                 <div class="center">
+                  <a href="#">Link to project</a>
+                </div>
+
+                 <div>
+                   <p>This project does not yet exist. When it does, a description of the project will go here.You will be able to follow <a href="#">this link to a github repository.</a></p>
+                 </div>
+
+               </div>
+               <div class="item">
+                 <div>
+                   <h3>Project #2</h3>
+                 </div>
+
+                 <div>
+                  <img id="project-2" src="images/maine-2.jpg" width="100%" alt="thumbnail of project">
+                 </div>
+                 
+                 <div class="center">
+                  <a href="#">Link to project</a>
+                </div>
+
+                 <div>
+                  <p>This project does not yet exist. When it does, a description of the project will go here.You will be able to follow <a href="#">this link to a github repository.</a></p>
+                </div>
+
+               </div>
+               <div class="item">
+                 <div>
+                   <h3>Project #3</h3>
+                 </div>
+
+                 <div>
+                  <img id="project-3" src="images/hawaii.jpg" width="100%" alt="thumbnail of project">
+                 </div>
+                 
+                 <div class="center">
+                   <a href="#">Link to project</a>
+                 </div>
+
+                 <div>
+                  <p>This project does not yet exist. When it does, a description of the project will go here.You will be able to follow <a href="#">this link to a github repository.</a></p>
+                </div>
+
+               </div>
+
+             </div>
+
+           </section>
          </div>
       </article>
     </div>
@@ -121,6 +257,7 @@
         <li><a href = "#about">About Me</a></li>
         <li><a href = "#dnd">DnD Character Generator</a></li>
         <li><a href = "#contact">Contact Me</a></li>
+        <li><a href ="#projects">Projects</a></li>
       </ul>
     </nav>
   </footer>
