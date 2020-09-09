@@ -1,46 +1,43 @@
 /* header and menu */
-
+body {
+  margin: 0;
+}
+/*Header and navbar*/
 header {
   background-color: #2D0320;
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 100px;
-  color: #FFFFFF;
   height: auto;
 }
 
-h1 {
+header h1 {
   font-family: 'Blastimo', Verdana, Geneva, Tahoma, sans-serif;
   font-size: 72px;
-  padding: 0;
+  padding-top: 20px;
   margin: 0;
 }
 
-h3 {
-  padding: 0;
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
 }
 
 h3, h1 {
   text-align: center;
 }
-
-nav ul {
- background-color: #645E9D;
-}
-
-
+ 
 header, footer, .middle, .contact {
   color: #FFFFFF;
 }
 /* horizontal menu*/
 nav ul {
   list-style-type: none;
-  margin-top: 50px;
-  margin-bottom: -100px;
   padding: 10px;
   text-align: left;
+  background-color: #645E9D;
 }
 
 nav li {
@@ -55,16 +52,23 @@ nav li a {
   text-decoration: none;
 }
 
-nav li a:hover {
-  background-color: #392B58;
-  padding: 10px;
-}
 
 /*bio portrati*/
+.group { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  flex: 1;
+
+}
 
 div #image {
   margin: auto;
-  margin-top: -50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 300px;
  
 }
@@ -94,6 +98,18 @@ h2, nav {
 }
 
 /* About */
+h2{
+  font-size: 30px;
+}
+
+h3 {
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-bottom: solid #fff;
+}
+
 article {
 font-family: Arial, Helvetica, sans-serif;
 }
@@ -107,9 +123,6 @@ font-family: Arial, Helvetica, sans-serif;
   color: #D3D3D3;
 }
 
-.middle a:hover{
-  color: #99D5C9;
-}
 
 .middle a:visited {
   color: #99D5C9;
@@ -124,9 +137,6 @@ font-family: Arial, Helvetica, sans-serif;
   background-color: #392B58;
   padding: 20px;
 }
-.contact a:hover {
-  color:#645E9D;
-}
 
 .contact a:visited {
   color: #645E9D;
@@ -136,9 +146,103 @@ font-family: Arial, Helvetica, sans-serif;
   width: 150px;
   margin: auto;
 }
+input{
+  width: 300px;
+}
+textarea{
+  width: 300px;
+  height: 200px;
+}
+
+/*Projects*/
+
+.projects img{
+  border: solid #392B58 10px;
+}
+
+.projects {
+  color: #2D0320;
+}
+
+.projects a {
+  color: #645E9D;
+}
+
+.projects a:visited{
+  color: #D3D3D3;
+}
+
+.center{
+  text-align: center;
+}
 
 /* Footer */
 footer {
   padding-top: 20px;
   background-color: #392B58;
+}
+
+
+/*Media Query for Desktop*/
+@media all and (min-width: 600px){
+  /*navbar*/
+  header{
+    display:flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  header h1{
+    padding: 20px 20px 20px 20px;
+    font-size: 42px;
+  }
+
+  nav li a:hover {
+    background-color: #392B58;
+    padding: 10px;
+  }
+
+  /*Main Content*/
+
+  .group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .item-double{
+    flex: 2;
+  }
+
+  /*Contact*/
+  
+  .align-left {
+    text-align: left;
+  }
+
+  .contact form div {
+    margin: 20px;
+  }
+
+  textarea{
+    width: 100%;
+  }
+
+  /*Projects*/
+  .projects div{
+    margin: 10px;
+  }
+
+  .projects a:hover{
+    color: #D3D3D3;
+  }
+
+  
+  /*links*/
+  .middle a:hover{
+    color: #99D5C9;
+  }
+
+  .contact a:hover {
+    color:#645E9D;
+  }
 }
