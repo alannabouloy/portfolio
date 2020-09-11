@@ -13,44 +13,44 @@
 //Encoders
 'use strict';
 let dndRaces = {
-  "1": "Human",
-  "2": "Elf",
-  "3": "Half-Orc",
-  "4": "Half-Elf",
-  "5": "Dwarf", 
-  "6": "Dragonborn",
-  "7": "Tiefling",
-  "8": "Gnome"
+  '1': 'Human',
+  '2': 'Elf',
+  '3': 'Half-Orc',
+  '4': 'Half-Elf',
+  '5': 'Dwarf', 
+  '6': 'Dragonborn',
+  '7': 'Tiefling',
+  '8': 'Gnome'
 };
 
 let dndElves = {
-  "1": "High-Elf",
-  "2": "Wood-Elf",
-  "3": "Drow"
+  '1': 'High-Elf',
+  '2': 'Wood-Elf',
+  '3': 'Drow'
 };
 
 let dndClasses = {
-  "1": "Barabarian",
-  "2": "Fighter",
-  "3": "Monk",
-  "4": "Cleric",
-  "5": "Paladin", 
-  "6": "Warlock",
-  "7": "Sorceror",
-  "8": "Wizard",
-  "9": "Rogue",
-  "10": "Ranger",
-  "11": "Druid",
-  "12": "Bard"
+  '1': 'Barabarian',
+  '2': 'Fighter',
+  '3': 'Monk',
+  '4': 'Cleric',
+  '5': 'Paladin', 
+  '6': 'Warlock',
+  '7': 'Sorceror',
+  '8': 'Wizard',
+  '9': 'Rogue',
+  '10': 'Ranger',
+  '11': 'Druid',
+  '12': 'Bard'
 };
 
 let dndBackgrounds = {
-  "1": "Acolyte",
-  "2": "Criminal/Spy",
-  "3": "Folk Hero",
-  "4": "Noble",
-  "5": "Sage",
-  "6": "Soldier"
+  '1': 'Acolyte',
+  '2': 'Criminal/Spy',
+  '3': 'Folk Hero',
+  '4': 'Noble',
+  '5': 'Sage',
+  '6': 'Soldier'
 };
 //Functions
 
@@ -61,10 +61,10 @@ function generateRace(){
   //each number corresponds to different Race
   let race = dndRaces[num.toString()];
   //if elf or half-elf call on generateElf()
-  let subRace = "";
-  if (race === "Elf" || race === "Half-Elf"){
+  let subRace = '';
+  if (race === 'Elf' || race === 'Half-Elf'){
     subRace = generateElf();
-    race = race + ": " + subRace;
+    race = race + ': ' + subRace;
   }
   //return race
   return race;
@@ -82,11 +82,11 @@ function generateElf(){
 
 function generateClass(){
 //randomly generate number between 1 and 12
-let num = Math.floor(Math.random() * 12) + 1;
-//each number corresponds to different Class
-let charClass = dndClasses[num.toString()];
-//return class
-return charClass;
+  let num = Math.floor(Math.random() * 12) + 1;
+  //each number corresponds to different Class
+  let charClass = dndClasses[num.toString()];
+  //return class
+  return charClass;
 }
 //Generate Background
 function generateBackground(){
@@ -100,13 +100,13 @@ function generateBackground(){
 //Generate Character
 function generateCharacter(name){
 //create variables for characterRace, characterClass, and characterBackground.
-let characterRace = generateRace();
-let characterClass = generateClass();
-let characterBackground = generateBackground();
-//call generateRace(), generateClass(), and generateBackground()
-let characterInfo = "Here's your new character! <br> Name: " + name +"<br> Race: " + characterRace + "<br> Class: " + characterClass + "<br> Background: " + characterBackground + "<br> Happy Adventuring!";
-//return string that gives name, race, class, and background. 
-return characterInfo;
+  let characterRace = generateRace();
+  let characterClass = generateClass();
+  let characterBackground = generateBackground();
+  //call generateRace(), generateClass(), and generateBackground()
+  let characterInfo = 'Here\'s your new character! <br> Name: ' + name +'<br> Race: ' + characterRace + '<br> Class: ' + characterClass + '<br> Background: ' + characterBackground + '<br> Happy Adventuring!';
+  //return string that gives name, race, class, and background. 
+  return characterInfo;
 } 
 
 //alter HTML
@@ -115,20 +115,20 @@ function printCharacter(event){
 
   event.preventDefault();
   //create var name and set to value from form
-  let name = document.getElementById("character").value;
+  let name = document.getElementById('character').value;
 
   //access the hidden <p></p>
-  let newElement = document.getElementById("new-character");
- //replace with character info
+  let newElement = document.getElementById('new-character');
+  //replace with character info
   newElement.innerHTML = generateCharacter(name);
 
   //reset form
-  document.getElementById("dnd-generator-form").reset();
+  document.getElementById('dnd-generator-form').reset();
 
 
 
 }
 
-let dndForm = document.getElementById("dnd-generator-form");
+let dndForm = document.getElementById('dnd-generator-form');
 
-dndForm.addEventListener("submit", printCharacter);
+dndForm.addEventListener('submit', printCharacter);
