@@ -11,6 +11,7 @@
 //5. Returns a string that includes: Character Name, Race, Class, and Background.
 
 //Encoders
+'use strict';
 let dndRaces = {
   "1": "Human",
   "2": "Elf",
