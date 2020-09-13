@@ -1,4 +1,7 @@
 /* header and menu */
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
 }
